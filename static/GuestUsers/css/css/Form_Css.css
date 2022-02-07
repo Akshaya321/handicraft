@@ -1,0 +1,111 @@
+
+#form1
+{
+	background: rgba(255,255,255,1);
+	position: absolute;
+	/*align: center;*/
+	/*margin: auto;*/
+	color: rgba(0,30,60,1);
+	padding: 2% 4%;
+	font-family: "Tw Cen MT";
+	background-color: rgba(255,255,255,.5);
+	box-shadow: 0 1 4px rgba(0,0,0,.5);
+	overflow: hidden;
+	border-radius: 5px;
+	left: 10px;
+	top: 25x;
+	z-index: 3;
+	height:675px;
+}
+
+form h1
+{
+    font-size: 34px;
+    color: rgba(0,30,60,1); 
+}
+
+input
+{
+/*   width: 35%;*/
+    outline: none;
+    font-size: 20px;
+    font-family: "TW Cen MT";
+    padding: 4px 8px;
+    background: rgba(255,255,255,.2); 
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    transition:ease-out .1s;
+}
+
+button
+{
+    padding: 2px 8px;
+    font-family: "TW Cen MT";
+    font-size: 24px;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    background: rgba(255,255,255,.4);
+    transition: ease-out .1s;
+    border-radius: 2px;
+}
+
+button:hover
+{
+    box-shadow: 0 0 10px rgba(255,255,255,1); 
+    background: rgba(0,30,60,.3);
+    color: white;
+    cursor: pointer;
+}
+
+
+input:focus
+{
+    background: rgba(0,30,60,.1);
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,1); 
+}
+
+textarea
+{
+/*  width: 60%;*/
+    height: 100px;
+    border: none;
+    font-family: "Tw Cen MT";
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    background: rgba(255,255,255,.4); 
+    padding: 2px 2px;
+	border-radius:10px;
+	
+}
+
+textarea:focus
+{
+    box-shadow: 0 0 10px rgba(255,255,255,1); 
+    background: rgba(0,30,60,.1);
+    outline: transparent;
+    color: white;   
+}
+.lname
+{
+	float:left;
+}
+.hd
+{
+	background-image:url(../Image/bg.jpg);
+}
+select
+{
+/*   width: 35%;*/
+    outline: none;
+    font-size: 20px;
+    font-family: "TW Cen MT";
+    padding: 4px 8px;
+    background: rgba(255,255,255,.2); 
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    transition:ease-out .1s;
+}

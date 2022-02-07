@@ -1,0 +1,60 @@
+{% include "Agency/header.html" %}
+{% load static %}
+<!--<section class="spacer green">
+		<div class="container">
+			<div class="row">
+				<div class="span6 alignright flyLeft">
+					<blockquote class="large">
+						There's huge space beetween creativity and imagination <cite>Mark Simmons, Nett Media</cite>
+					</blockquote>
+				</div>
+				<div class="span6 aligncenter flyRight">
+					<i class="icon-coffee icon-10x"></i>
+				</div>
+			</div>
+		</div>
+	</section>-->
+	<!-- end spacer section -->
+	<!-- section: team -->
+	<section id="about" class="section">
+		<div class="container">
+
+			<h2>Welcome   {{ request.session.uname }}</h2>
+
+            <div class="agile-tables">
+					<div class="w3l-table-info">
+
+
+
+					  <h2>Handicrafer List</h2>
+					    <table id="table" border="1">
+						<thead>
+						  <tr>
+
+							<th>Name</th>
+							<th>Confirm</th>
+							<th></th>
+
+						  </tr>
+						</thead>
+                            <tbody>
+                            {%  for handi in handi %}
+
+						  <tr>
+
+							<td>{{ handi.HandicrafterName}}</td>
+                              <td ><a href="{% url 'approvehandicrafter' id=handi.login_id %}" >Approve</a></td>
+                        <td ><a href="#"></a></td>
+                              </tr>
+              {% endfor %}
+                            </tbody>
+                        </table>
+        </div>
+            </div>
+        </div>
+    </section>
+
+					</div>
+				</div>
+
+         {% include "Agency/footer.html" %}

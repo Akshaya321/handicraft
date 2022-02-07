@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>District</title>
+</head>
+<body>
+<form method="post" nonvalidate action="{% url 'dis' %}">
+    {% csrf_token %}
+<tr>
+        <td>District</td>
+        <td><select name="dname">
+            <option value="0">select</option>
+            <option value="Alapuzha">Alapuzhe</option>
+            <option value="Pathanamthitta">Pathanamthitta</option>
+            <option value="kottayam">Kottayam</option>
+            <option value="Kochi">Kochi</option>
+            <option value="Kollam">Kollam</option>
+        </select></td>
+</tr>
+    <br>
+    <center>
+    <tr>
+
+        <td colspan="2"><button type="submit" name="submit" value="Add">submit</button></td>
+    </tr>
+    </center>
+</form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% include "GuestUsers/header.html" %}
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Handicrafter Registration Info</h2>
+                    <form method="POST"nonvalidate action="{% url 'handiregister' %}">
+                         {% csrf_token %}
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Name" name="hname">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Address" name="haddress">
+                        </div>
+                        <div class="input-group">
+
+                         <tr>
+                                <td>Agency</td>
+                                <td><select name="agencyname">
+                                <option value="0">select</option>
+                                {% for ag in ag %}
+                                <option value="{{ ag.AgencyId}}">{{ ag.AgencyName }}</option>
+                                {% endfor %}
+                                </select></td>
+                         </tr>
+
+                        </div>
+
+
+                         <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="DOB" name="dob">
+                        </div>
+
+
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Email" name="email">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" placeholder="Phone" name="phone">
+                        </div>
+
+
+
+<div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Username" name="uname">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="password" name="password">
+                        </div>
+
+
+
+
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% include "GuestUsers/footer.html" %}

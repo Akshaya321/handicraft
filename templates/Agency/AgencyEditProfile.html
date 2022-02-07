@@ -1,0 +1,123 @@
+{% include "Agency/header.html" %}
+{% load static %}
+<!--<section class="spacer green">
+		<div class="container">
+			<div class="row">
+				<div class="span6 alignright flyLeft">
+					<blockquote class="large">
+						There's huge space beetween creativity and imagination <cite>Mark Simmons, Nett Media</cite>
+					</blockquote>
+				</div>
+				<div class="span6 aligncenter flyRight">
+					<i class="icon-coffee icon-10x"></i>
+				</div>
+			</div>
+		</div>
+	</section>-->
+	<!-- end spacer section -->
+	<!-- section: team -->
+	<section id="about" class="section">
+		<div class="container">
+
+			<h2>Welcome   {{ request.session.uname }}</h2>
+
+			<div class="row">
+				<div class="span4 offset1">
+					<div>
+
+					</div>
+				</div>
+
+<form class="form-horizontal" action="{% url 'agencyprofileedit' %}" method="post">
+            {% csrf_token %}
+                <table>
+                    <tr>
+                    <th colspan="2">Editprofile</th></tr>
+                    <tr>
+                    <td>Name</td>
+                        <td><input type="text" name="name"  value="{{agen.AgencyName}}"></td>
+                    </tr>
+
+                    <tr>
+                    <td>Address</td>
+                        <td><input type="text" name="address"  value="{{agen.address}}"></td>
+                    </tr>
+
+                      <tr>
+                    <td>Pin</td>
+                        <td><input type="text" name="pin"  value="{{agen.pin}}"></td>
+                    </tr>
+
+
+                      <tr>
+                    <td>Email</td>
+                        <td><input type="text" name="email"  value="{{agen.email}}"></td>
+                    </tr>
+
+
+                    <tr>
+                    <td>Phone</td>
+                        <td><input type="text" name="phone"  value="{{agen.phone}}"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><input type="submit" name="b" value="EditProfile"></td>
+                    </tr>
+
+                </table>
+</form>
+				<!--<div class="span6">
+					<div class="aligncenter">
+						<img src="{% static 'Agency/img/icons/creativity.png' %}" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span2 offset1 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="{% static 'Agency/img/team/img-1.jpg' %}" alt="" />
+						<h3>John Doe</h3>
+						<p>
+							Art director
+						</p>
+					</div>
+				</div>
+				<div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="{% static 'Agency/img/team/img-2.jpg' %}" alt="" />
+						<h3>Mike Doe</h3>
+						<p>
+							Web developer
+						</p>
+					</div>
+				</div>
+				<div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="{% static 'Agency/img/team/img-3.jpg' %}" alt="" />
+						<h3>Neil Doe</h3>
+						<p>
+							Web designer
+						</p>
+					</div>
+				</div>
+				<div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="{% static 'Agency/img/team/img-4.jpg' %}" alt="" />
+						<h3>Mark Joe</h3>
+						<p>
+							UI designer
+						</p>
+					</div>
+				</div>
+				<div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="{% static 'Agency/img/team/img-5.jpg' %}" alt="" />
+						<h3>Stephen B</h3>
+						<p>
+							Digital imaging
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>-->
+         {% include "Agency/footer.html" %}

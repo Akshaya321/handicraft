@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+<body>
+<form method="post" nonvalidate action="{% url 'cate' %}">
+    {% csrf_token %}
+    <tr>
+        <td>Category</td>
+        <td><select name="cat_name">
+            <option value="0">select</option>
+            <option value="Wood">Wood</option>
+            <option value="Clothe">Clothe</option>
+            <option value="Paper">Paper</option>
+
+        </select></td>
+     </tr>
+    <br><br>
+    <tr>
+
+        <td colspan="2"><button type="submit" name="submit" value="Add">submit</button></td>
+    </tr>
+</body>
+</html>

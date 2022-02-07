@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Approve</title>
+</head>
+<body>
+<form method="POST"nonvalidate action="{% url 'approve' %}">
+    {% csrf_token %}
+    </div>
+<div id="handi">
+    <div class="container">
+<table class="table table-bordered" border="1">
+	<h1>Handicrafter Details</h1>
+    <thead class="alert-warning">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Dob</th>
+            <th>Phone</th>
+			<th>Agency</th>
+			<th>Login</th>
+			<th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for handi in handi %}
+        <tr>
+            <td>{{ handi.Hname }}</td>
+            <td>{{ handi.address }}</td>
+            <td>{{ handi.dob }}</td>
+            <td>{{ handi.phone }}</td>
+			 <td>{{ handi.agency_id }}</td>
+            <td>{{handi.login_id}}</td>
+            <td><center><a class="btn btn-sm btn-warning" href="approveid/{{handi.login_id}}"><span class="glyphicon glyphicon-edit"></span>Approve</a> </center>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    </div>
+     </div>
+<div id="agency">
+    <div class="container">
+<table class="table table-bordered" border="1">
+	<h1>Agency Details</h1>
+    <thead class="alert-warning">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>District</th>
+            <th>Pin</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Login</th>
+			<th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for agency in agency %}
+        <tr>
+            <td>{{ agency.Aname }}</td>
+            <td>{{ agency.address }}</td>
+            <td>{{ agency.district_id }}</td>
+            <td>{{ agency.pin }}</td>
+            <td>{{ agency.email }}</td>
+            <td>{{ agency.phone }}</td>
+            <td>{{agency.login_id}}</td>
+            <td><center><a class="btn btn-sm btn-warning" href="approveid/{{handi.login_id}}"><span class="glyphicon glyphicon-edit"></span>Approve</a> </center>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    </div>
+
+</form>
+</body>
+</html>

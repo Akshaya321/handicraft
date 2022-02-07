@@ -1,0 +1,68 @@
+{% include "GuestUsers/header.html" %}
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Customer Registration Info</h2>
+                    <form method="POST"nonvalidate action="{% url 'customerregister' %}">
+                         {% csrf_token %}
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Name" name="cname">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Address" name="caddress">
+                        </div>
+                        <div class="input-group">
+
+                         <tr>
+                                <td>Location</td>
+                                <td><select name="location">
+                                <option value="0">select</option>
+                                {% for lo in loc %}
+                                <option value="{{ lo.LocationId}}">{{ lo.LocationName }}</option>
+                                {% endfor %}
+                                </select></td>
+                         </tr>
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="date" placeholder="DOB" name="cdob">
+                        </div>
+
+                       <div class="input-group">
+                         <input type="radio"  id="inputEmail3" placeholder="gender" name="rblgender" value="Male">Male
+      <input type="radio"  id="inputEmail3" placeholder="gender" name="rblgender" value="Female">Female
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Email" name="cemail">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" placeholder="Phone" name="cphone">
+                        </div>
+
+
+
+
+<div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Username" name="uname">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="password" name="password">
+                        </div>
+
+
+
+
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% include "GuestUsers/footer.html" %}

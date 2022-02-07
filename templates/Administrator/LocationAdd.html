@@ -1,0 +1,42 @@
+{% include "administrator/header.html" %}
+
+<div class="grid-form">
+		<div class="grid-form1">
+<h3 id="forms-horizontal">LOCATION</h3>
+<form class="form-horizontal" action="{% url 'location' %}" method="post">
+            {% csrf_token %}
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label hor-form">District Name </label>
+    <div class="col-sm-10">
+        <select name="district">
+
+             {%  for row in dis %}
+
+            <option value="{{ row.DistrictId }}">{{ row.dname }}</option>
+
+            {% endfor %}
+
+        </select>
+    </div>
+  </div>
+
+
+     <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label hor-form">Location Name </label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Location" name="locationname">
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" class="btn btn-default" name="submit" value="Add Location">
+    </div>
+  </div>
+</form>
+</div>
+</div>
+
+{% include "administrator/footer.html" %}

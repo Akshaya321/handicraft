@@ -1,0 +1,47 @@
+{% include "Handicrafter/header.html" %}
+
+<h3 id="forms-horizontal">Product</h3>
+
+            {% csrf_token %}
+
+
+				<!-- tables -->
+
+<div ALIGN="CENTER">
+					 <font color="maroon" size="4">
+					    <table id="table" border="1">
+						<thead>
+						  <tr>
+
+							<th>Name</th>
+							<th>CustomerName</th>
+							<th>Address</th>
+                              <th>Price</th>
+                               <th>Quantity</th>
+							  <th>Image</th>
+
+						  </tr>
+						</thead>
+                            <tbody>
+                            {%  for car in car %}
+
+						  <tr>
+
+							<td>{{ car.product.productname }}</td>
+							  <td>{{ car.customer.CusttomerName }}</td>
+                         <td>{{ car.customer.address }}</td>
+
+							  <td>{{ car.price }}</td>
+                              <td>{{ car.noofqunatity }}</td>
+							   <td><img src="../../productphoto/{{car.product.photo}}" width="70" height="70"></td>
+
+
+                              </tr>
+
+{% endfor %}
+
+						</tbody>
+					  </table></font></div>
+
+
+{% include "Handicrafter/footer.html" %}

@@ -1,0 +1,40 @@
+{% include "administrator/header.html" %}
+<div class="agile-grids">
+				<!-- tables -->
+
+				<div class="agile-tables">
+					<div class="w3l-table-info">
+					  <h2>Handicrafters List</h2>
+					    <table id="table">
+						<thead>
+						  <tr>
+
+							<th>Name</th>
+							<th>Address</th>
+							<th>DOB</th>
+                              <th>Phone</th>
+                           <th>Email</th>
+                           <th>AgencyName</th>
+						</thead>
+                            <tbody>
+                            {%  for handi in handi %}
+
+						  <tr>
+
+							<td>{{ handi.HandicrafterName }}</td>
+							  <td>{{ handi.address }}</td>
+							  <td>{{ handi.dob }}</td>
+                            <td>{{ handi.phone }}</td>
+							  <td>{{ handi.email }}</td>
+                              <td>{{ handi.agency.AgencyName }}</td>
+                              </tr>
+              {% endfor %}
+
+
+						</tbody>
+					  </table>
+					</div>
+                </div>
+</div>
+
+{% include "administrator/footer.html" %}

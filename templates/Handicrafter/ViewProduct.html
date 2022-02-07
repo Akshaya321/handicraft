@@ -1,0 +1,47 @@
+{% include "Handicrafter/header.html" %}
+
+<h3 id="forms-horizontal">Product</h3>
+
+            {% csrf_token %}
+
+
+				<!-- tables -->
+
+<div ALIGN="CENTER">
+					 <font color="maroon" size="4">
+					    <table id="table" border="1">
+						<thead>
+						  <tr>
+
+							<th>Name</th>
+							<th>Description</th>
+							<th>Price</th>
+							  <th>Image</th>
+						<th>Status</th>
+
+						  </tr>
+						</thead>
+                            <tbody>
+                            {%  for pro in pro %}
+
+						  <tr>
+
+							<td>{{ pro.productname }}</td>
+							  <td>{{ pro.description }}</td>
+
+							  <td>{{ pro.price }}</td>
+							   <td><img src="../../productphoto/{{pro.photo}}" width="70" height="70"></td>
+							   <td>
+								   {{ pro.status }}
+
+							   </td>
+
+                              </tr>
+
+{% endfor %}
+
+						</tbody>
+					  </table></font></div>
+
+
+{% include "Handicrafter/footer.html" %}
